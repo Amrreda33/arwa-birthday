@@ -1,0 +1,4 @@
+PUT YOUR PHOTOS IN THIS FOLDER  |  حط صورك في الفولدر ده
+
+Then write each file name in content/birthdayData.js
+وبعدين اكتب اسم كل صورة في ملف content/birthdayData.js

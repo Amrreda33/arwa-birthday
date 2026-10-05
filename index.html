@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>A little surprise for you</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#160C22">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- What people see when the link is shared (WhatsApp, Messenger...).
+       Kept mysterious on purpose. You can change these two lines. -->
+  <meta name="description" content="Open it when you're ready.">
+  <meta property="og:title" content="A little surprise for you">
+  <meta property="og:description" content="Open it when you're ready.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
+
+
+  <style>
+    html {
+      background: #160C22
+    }
+  </style>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/story.css">
+  <link rel="stylesheet" href="css/overlays.css">
+
+  <!-- Catches typos in content/birthdayData.js so we can explain them kindly -->
+  <script>
+    window.__errs = [];
+    window.addEventListener('error', function (e) {
+      window.__errs.push({ file: e.filename || '', line: e.lineno || 0, col: e.colno || 0, msg: e.message || '' });
+    });
+  </script>
+</head>
+
+<body class="is-locked" data-mood="night">
+
+  <div class="stage" aria-hidden="true">
+    <div class="stage__mood stage__mood--night"></div>
+    <div class="stage__mood stage__mood--ember"></div>
+    <div class="stage__mood stage__mood--rose"></div>
+    <div class="stage__mood stage__mood--dusk"></div>
+    <div class="stage__mood stage__mood--vault"></div>
+    <div class="stage__mood stage__mood--champagne"></div>
+    <canvas class="stage__dust" id="dust"></canvas>
+    <div class="stage__grain"></div>
+    <div class="stage__vignette"></div>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"><i></i></div>
+
+  <div id="screens"></div>
+  <main class="story" id="story"></main>
+  <div id="player-root"></div>
+  <div id="lightbox-root"></div>
+  <canvas class="fx" id="fx" aria-hidden="true"></canvas>
+
+  <noscript>
+    <div class="fatal" style="display:flex">
+      <div class="fatal__box">
+        <p>This surprise needs JavaScript to be turned on in your browser.</p>
+      </div>
+    </div>
+  </noscript>
+
+  <!-- 1) The two files with your content -->
+  <script src="content/ui-text.js"></script>
+  <script src="content/birthdayData.js"></script>
+
+  <!-- 2) The engine (you never need to edit these) -->
+  <script src="js/core.js"></script>
+  <script src="js/fx.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/chapters-a.js"></script>
+  <script src="js/chapters-b.js"></script>
+  <script src="js/chapters-c.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
